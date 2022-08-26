@@ -5,6 +5,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>Teste Background</title>
+    @vite(['resources/js/app.js','resources/css/app.css'])
     <style>
     @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
@@ -13,7 +14,7 @@ margin:0;
 }
 
 h1 {
-font-family: 'Lato', sans-serif;
+font-family: '', sans-serif;
 font-weight:300;
 letter-spacing: 2px;
 font-size:48px;
@@ -134,25 +135,43 @@ c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3
 
 <main class="form-signin w-25 d-flex justify-content-center bg-light bg-gradient bg-opacity-25 border-primary border-opacity-25 border border-3 p-3 container-lg rounded">
   <div class="d-flex justify-content-center">
-    <form class="p-3">
-      <h1 class="fw-bold text-black h3 mb-3 fw-normal">Login do Gerente Responsável</h1>
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
+      <h1 class="text-black text-opacity-50 h3 mb-3 fw-normal">Login do Gerente Responsável</h1>
 
       <div class="form-floating">
-        <input type="text" class="form-control" id="InputLogin" placeholder="seu.login.123">
-        <label class="text-black" for="floatingInput">Login</label>
+        <input id="email" type="floatingInput" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+        <label class="text-black " for="floatingInput">Endereço de Email</label>
+        @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="sua.senha.321">
-        <label class="text-black" for="floatingPassword">Senha</label>
+        <input id="floatingPassword" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+        <label for="floatingPassword" class="text-black">Senha</label>
+        @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
       </div>
-
-      <div class="checkbox d-flex mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Lembre-se
-        </label>
+      <div class="form-check d-flex justify-content-start">
+          <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+        <div class="d-flex s-1">
+          <label class="form-check-label" for="remember">
+               Lembre-se
+          </label>
+        </div>
       </div>
       <div class="d-flex flex-row justify-content-between">
         <a class="w-1 btn btn-lg btn-warning" href="cadastro.html" role="button">Cadastrar-se</a>
+        @if (Route::has('password.request'))
+            <a class="text-dark text-opacity-75 btn btn-link" href="{{ route('password.request') }}">
+                {{ __('Esqueceu sua senha?') }}
+            </a>
+        @endif
         <button class="w-1 btn btn-lg btn-success" type="submit">Entrar</button>
       </div>
     </form>
@@ -185,9 +204,6 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 <!--Header ends-->
 
 <!--Content starts-->
-<div class="content flex">
-  <p>By.Goodkatz | Free to use </p>
-</div>
 <!--Content ends-->
 
   </body>

@@ -12,7 +12,7 @@ class OlaController extends Controller
     }
     public function login()
     {
-      return view('login');
+      return view('teste_background');
     }
     public function cardapio()
     {
@@ -41,6 +41,14 @@ class OlaController extends Controller
     public function teste_background()
     {
       return view('teste_background');
+    }
+    public function telagerente()
+    {
+      return view('telagerente');
+    }
+    public function login2()
+    {
+      return view('login2');
     }
 
 }
