@@ -166,7 +166,7 @@ c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3
         </div>
       </div>
       <div class="d-flex flex-row justify-content-between">
-        <a class="w-1 btn btn-lg btn-warning" href="cadastro.html" role="button">Cadastrar-se</a>
+        <a class="w-1 btn btn-lg btn-warning" href="registro" role="button">Cadastre-se</a>
         @if (Route::has('password.request'))
             <a class="text-dark text-opacity-75 btn btn-link" href="{{ route('password.request') }}">
                 {{ __('Esqueceu sua senha?') }}

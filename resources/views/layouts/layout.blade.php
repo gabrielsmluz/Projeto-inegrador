@@ -57,8 +57,8 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid d-flex">
-        <div class=justify-content-start style="width: 38rem;display: inherit;">
-        <a class="navbar-brand" href="login">Home</a>
+        <div class=justify-content-start style="width: 100%;display: inherit;">
+        <a class="navbar-brand" href="teste_background">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,18 +66,20 @@
               <!-- Authentication Links -->
               @guest
                   @if (Route::has('login'))
+                    <ul class="navbar-nav ms-auto">
                       <li class="nav-item">
-                          <a class="d-flex border nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                          <a class="d-flex rounded nav-link" href="teste_background">{{ __('Login') }}</a>
                       </li>
                   @endif
 
                   @if (Route::has('register'))
                       <li class="nav-item">
-                          <a class="d-flex border rouded nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                          <a class="d-flex rounded nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                       </li>
+                    </ul>
                   @endif
               @else
-              <ul class="navbar-nav ms-auto">
+              <ul class="navbar-nav me-auto">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="cardapio">Cardápios</a>

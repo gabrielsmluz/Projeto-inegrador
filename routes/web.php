@@ -23,6 +23,8 @@ Route::get('/verpedidos','App\Http\Controllers\OlaController@verpedidos');
 Route::get('/editarcardapio','App\Http\Controllers\OlaController@editarcardapio');
 Route::get('/produtos','App\Http\Controllers\OlaController@produtos');
 Route::get('/teste_background','App\Http\Controllers\OlaController@teste_background');
+Route::get('/registro','App\Http\Controllers\OlaController@registro');
+
 
 Auth::routes();
 Route::get('/telagerente','App\Http\Controllers\OlaController@telagerente');

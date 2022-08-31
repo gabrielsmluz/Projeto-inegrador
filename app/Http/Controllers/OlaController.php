@@ -50,5 +50,9 @@ class OlaController extends Controller
     {
       return view('login2');
     }
+    public function registro()
+    {
+      return view('registro');
+    }
 
 }
