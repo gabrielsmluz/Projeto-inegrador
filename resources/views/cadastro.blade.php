@@ -32,36 +32,40 @@
         </div>
         <div class="d-flex m-1">
           <div class="d-flex flex-column p-1 w-50">
-            <label for="inputGerenteResponsável" class="form-label">Gerente Responsável</label>
-            <input type="email" class="form-control" id="inputGerenteResponsável" placeholder="Fulano Souza da Silva">
+            <label for="inputNome" class="form-label">Nome</label>
+            @error('name')
+                <span class="invalid-feedback" role="alert" name="name">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
           </div>
           <div class="d-flex flex-column p-1 w-50">
-            <label for="inputTelefoneGerente" class="form-label">Telefone do Gerente</label>
-            <input type="text" class="form-control" id="inputTelefoneGerente" placeholder="4236264305">
+            <label for="inputTelefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="inputTelefone" placeholder="4236264305" name="phone">
           </div>
         </div>
         <div class="d-flex m-1">
           <div class="d-flex flex-column p-1 w-50">
             <label for="inputEndereço" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="inputEndereço" placeholder="Rua Saldanha Marinho">
+            <input type="text" class="form-control" id="inputEndereço" placeholder="Rua Saldanha Marinho" name="adress">
           </div>
           <div class="d-flex flex-column p-1 w-25">
             <label for="inputLogradouro" class="form-label">Logradouro</label>
-            <input type="text" class="form-control" id="inputLogradouro" placeholder="1234">
+            <input type="text" class="form-control" id="inputLogradouro" placeholder="1234" name="housenumbering">
           </div>
           <div class="d-flex flex-column p-1 w-25">
             <label for="inputBairro" class="form-label">Bairro</label>
-            <input type="text" class="form-control" id="inputBairro" placeholder="Dos Estados">
+            <input type="text" class="form-control" id="inputBairro" placeholder="Dos Estados" name="district">
           </div>
         </div>
         <div class="d-flex m-1">
           <div class="d-flex flex-column p-1 w-50">
             <label for="inputCidade" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCidade" placeholder="Curitiba">
+            <input type="text" class="form-control" id="inputCidade" placeholder="Curitiba" name="city">
           </div>
           <div class="d-flex flex-column p-1 w-25">
             <label for="InputEstado" class="form-label">Estado(UF)</label>
-            <input class="form-control" list="datalistOptions" id="InputEstado" placeholder="Pesquise Aqui Seu Estado (UF)">
+            <input class="form-control" list="datalistOptions" id="InputEstado" placeholder="Pesquise Aqui Seu Estado (UF)" name="state">
             <datalist id="datalistOptions">
               <option value="Acre">
               <option value="Alagoas">
@@ -94,21 +98,23 @@
           </div>
           <div class="d-flex flex-column p-1 w-25">
             <label for="inputCEP" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="inputCEP" placeholder="85420-169">
+            <input type="text" class="form-control" id="inputCEP" placeholder="85420-169" name="cep">
           </div>
         </div>
         <div class="d-flex m-1">
           <div class="d-flex flex-column p-1 w-50">
-            <label for="inputlogin" class="form-label">Login</label>
-            <input type="email" class="form-control" id="inputlogin" placeholder="seu-login123">
+            <label for="inputlogin" class="form-label">---------</label>
+            <input type="email" class="form-control" id="inputlogin" placeholder="seu-login123" name="">
           </div>
           <div class="d-flex flex-column p-1 w-50">
             <label for="inputSenha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="inputSenha" placeholder="sua.senha.321">
+            <input type="password" class="form-control" id="inputSenha" placeholder="sua.senha.321" name="password">
           </div>
         </div>
         <div class="d-flex justify-content-end p-3">
-          <button type="submit" class=" btn btn-success btn-lg">Alterar Dados</button>
+          <button type="submit" class=" btn btn-success btn-lg">
+            {{ __('Registrar') }}
+          </button>
         </div>
       </div>
     </div>
