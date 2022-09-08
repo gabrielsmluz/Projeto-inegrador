@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('establishments', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('cnpj');
-            $table->string('trading_name');
-            $table->string('company_name');
-            $table->string('adress');
-            $table->string('phone');
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->unsignedInteger('price_cents')->nullable();
+            $table->boolean('is_available')->nullable();
+            $table->foreignId('establishment_id')
+              ->constrained('establishments')
+              ->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -31,8 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-      Schema::table('establishments', function (Blueprint $table) {
-        $table->dropIfExists(['establishments']);
-        });
+        Schema::dropIfExists('products');
     }
 };

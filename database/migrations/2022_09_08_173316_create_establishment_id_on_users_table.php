@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('users', function(Blueprint $table){
+        Schema::table('users', function (Blueprint $table) {
           $table->foreignId('establishment_id')
-            ->nullable()
-            ->constrained('establishments')
-            ->nullOndelete();
+          ->nullable()
+          ->constrained('establishments')
+          ->nullOnDelete();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -27,8 +28,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-          $table->dropForeign(['establishment_id']);
+          Schema::table('users', function (Blueprint $table) {
+            $table->dropForeign('users_establishment_id_foreign');
+            $table->dropColumn(['establishment_id']);
         });
     }
 };
