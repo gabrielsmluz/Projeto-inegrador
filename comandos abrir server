@@ -1,0 +1,21 @@
+(ANTES DE COMEÇAR A TRABALHAR)
+
+git pull origin master - certifica que todos os arquivos estão em dia
+----------------------------------------------------------------------------------
+php artisan serve - levantar seridor
+----------------------------------------------------------------------------------
+npm run dev - compilar arquivos css e js
+----------------------------------------------------------------------------------
+
+(DEPOIS QUE TERMINAR DE TRABALHAR)
+
+1. git add . -Comando que envia todos os arquivos modificados para a área de commit
+--------------------------------------------------------------------------------------------
+2. git commit -m ‘<mensagem do commit>’ - faz o commit com a mensagem do que se trata
+--------------------------------------------------------------------------------------------
+3. git push -u origin master - zEnvia realmente as modificações no repositório do github.
+--------------------------------------------------------------------------------------------
+
+
+
+
