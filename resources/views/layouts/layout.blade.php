@@ -3,6 +3,7 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <meta charset="utf-8">
     <style>
     .toggle {
@@ -68,13 +69,13 @@
                   @if (Route::has('login'))
                     <ul class="navbar-nav ms-auto">
                       <li class="nav-item">
-                          <a class="d-flex rounded nav-link" href="teste_background">{{ __('Login') }}</a>
+                          <a class="d-flex rounded nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                       </li>
                   @endif
 
                   @if (Route::has('register'))
                       <li class="nav-item">
-                          <a class="d-flex rounded nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                          <a class="d-flex rounded nav-link" href="{{ route('register') }}">{{ __('Registrar-se') }}</a>
                       </li>
                     </ul>
                   @endif
@@ -91,7 +92,7 @@
                   <a class="nav-link active" href="verpedidos">Ver Pedidos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="funcionarios">Funcionários</a>
+                  <a class="nav-link active" href="{{route('user.index')}}">Funcionários</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="cadastro">Dados da Empresa</a>
@@ -99,9 +100,10 @@
               </ul>
                 <li class="nav-item dropdown">
                 </div>
-                      </div>
+                  </div>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
-                    @csrf <button class="btn btn-danger" type="submit" name="logout">Logout</button>
+                    @csrf
+                    <button class="btn btn-danger" type="submit" name="logout">Logout</button>
                   </form>
                 </li>
               @endguest
