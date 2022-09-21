@@ -86,7 +86,7 @@
                   <a class="nav-link active" aria-current="page" href="cardapio">Cardápios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="produtos">Produtos</a>
+                  <a class="nav-link active" href="{{route('product.index')}}">Produtos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="verpedidos">Ver Pedidos</a>

@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'cpf',
+        'adress',
         'phone',
         'type',
         'establishment_id',

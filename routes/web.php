@@ -21,6 +21,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')->group(function () {
 
-  Route::resource('user', App\Http\Controllers\UserController::class);
+Route::resource('user', App\Http\Controllers\UserController::class);
+
+Route::resource('product', App\Http\Controllers\ProductController::class);
 
 });
