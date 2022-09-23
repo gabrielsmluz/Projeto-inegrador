@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\UserRequest;
-use App\Models\User;
+use App\Models\Establishment;
 
-class UserController extends Controller
+class EstablishmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-      $users = User::all();
+      $establishments = Establishment::all();
 
-      return view('users.index', ['users'=> $users]);
+      return view('establishment.index', ['establishments'=> $establishments]);
     }
 
     /**
@@ -27,9 +26,9 @@ class UserController extends Controller
      */
     public function create()
     {
-      $users = User::all();
+      $establishments = Establishment::all();
 
-      return view('users.create', ['users'=> $users]);
+      return view('establishment.create', ['establishments'=> $establishments]);
     }
 
     /**
@@ -38,15 +37,13 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserRequest $request)
+    public function store(Request $request)
     {
-        $data = $request ->all();
+      $data = $request ->all();
 
-        $data['password'] = \Hash::make($data['password']);
+      Establishment::create($data);
 
-        User::create($data);
-
-        return redirect()->route('user.index');
+      return redirect()->route('establishment.index');
     }
 
     /**
@@ -55,9 +52,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        return view ('users.show', ['user'=>$user]);
+        //
     }
 
     /**
@@ -66,9 +63,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        return view('users.edit', ['user'=> $user]);
+        //
     }
 
     /**
@@ -78,17 +75,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if ($data['password'] === null) {
-          unset($data['password']);
-        } else {
-          $data['password'] = \Hash::make($data['password']);
-        }
-        $user->update($data);
-
-        return redirect()->route('user.show', $user);
+        //
     }
 
     /**
@@ -97,9 +86,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        $user->delete();
-        return redirect()->route('user.index');
+        //
     }
 }

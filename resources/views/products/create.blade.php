@@ -16,26 +16,30 @@
         <span class="input-group-text" id="basic-addon1">Nome</span>
         <input name="name" type="text" class="form-control" placeholder="Brigadeiro" aria-label="nome1" aria-describedby="basic-addon1">
       </div>
+      @error('name')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+      @enderror
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Preço, R$:</span>
         <input name="price_cents" type="text" class="form-control" placeholder="123,456" aria-label="preco1" aria-describedby="basic-addon1">
+        @error('price_cents')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
       </div>
     </div>
     <div class="d-flex flex-row">
       <div class="d-flex w-75 input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Descrição</span>
         <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
-      </div>
-      <div class="d-flex w-25 justify-content-center">
-        <div class="d-flex align-self-center flex-row">
-          <p>
-            Disponível:
-          </p>
-          <label class="d-flex toggle justify-content-center m-1" for="myToggle">
-            <input name="is_available" class="toggle__input" name="" type="checkbox" id="myToggle">
-            <div class="toggle__fill"></div>
-          </label>
-        </div>
+        @error('description')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
       </div>
     </div>
     <div class="d-flex flex-row">
@@ -53,5 +57,11 @@
   </div>
 </div>
 </form>
+
+@error('price_cents')
+    <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+@enderror
 
 @endsection

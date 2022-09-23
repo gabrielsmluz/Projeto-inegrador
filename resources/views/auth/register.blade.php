@@ -54,7 +54,7 @@
         <div class="d-flex m-1">
           <div class="d-flex flex-column p-1 w-25">
             <label for="inputEndereço" class="form-label">Endereço *</label>
-            <input type="text" class="form-control" id="inputEndereço" placeholder="Rua Saldanha Marinho" name="adress">
+            <input type="text" class="form-control" id="inputEndereço" placeholder="Rua Saldanha Marinho" name="address">
           </div>
           <div class="d-flex flex-column p-1 w-25">
             <label for="CPF" class="form-label">CPF *</label>
@@ -127,10 +127,20 @@
           <div class="d-flex flex-column p-1 w-25">
             <label for="password" class="form-label">Senha *</label>
             <input type="password" class="form-control" id="password" placeholder="sua.senha.321" name="password">
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
           </div>
           <div class="d-flex flex-column p-1 w-25">
             <label for="password_confirmation" class="form-label">Confirmar Senha *</label>
             <input type="password" class="form-control" id="password_confirmation" placeholder="sua.senha.321" name="password_confirmation" required autocomplete="new-password">
+            @error('password_confirmation')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
           </div>
         </div>
 

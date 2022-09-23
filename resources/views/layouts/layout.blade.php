@@ -83,25 +83,25 @@
               <ul class="navbar-nav me-auto">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="cardapio">Cardápios</a>
+                  <a class="nav-link active" aria-current="page" href="">Cardápios</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="{{route('product.index')}}">Produtos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="verpedidos">Ver Pedidos</a>
+                  <a class="nav-link active" href="">Ver Pedidos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active" href="{{route('user.index')}}">Funcionários</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="cadastro">Dados da Empresa</a>
+                  <a class="nav-link active" href="{{route('establishment.index')}}">Dados da Empresa</a>
                 </li>
               </ul>
                 <li class="nav-item dropdown">
                 </div>
                   </div>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
                     @csrf
                     <button class="btn btn-danger" type="submit" name="logout">Logout</button>
                   </form>

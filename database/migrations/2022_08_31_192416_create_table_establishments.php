@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('cnpj');
             $table->string('trading_name');
             $table->string('company_name');
-            $table->string('adress');
+            $table->string('address');
             $table->string('phone');
             $table->timestamps();
         });

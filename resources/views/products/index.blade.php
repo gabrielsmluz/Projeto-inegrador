@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 @section('title','Produtos')
 @section('main_content')
+<div style="opacity: 0.6" class="container">
+<img src="{{asset('/storage/images/armazem.jpg')}}" alt="">
   <div class="d-flex justify-content-center">
     <div class="d-inline-flex justify-content-start bg-secondary bg-opacity-10 rounded border border-success border-3 p-1">
       <h2>Lista de Produtos</h2>
@@ -9,9 +11,10 @@
   <div class="d-flex flex-column container-md">
   <div class="d-flex justify-content-end p-3">
     <a class="" href="{{ route('product.create') }}">
-      <button type="button" class="btn btn-primary">Adicionar Novo Funcionário</button>
+      <button type="button" class="btn btn-primary">Adicionar Novo Produto</button>
     </a>
   </div>
+
   <div class="d-flex flex-column container-lg">
     <div class="d-flex justify-content-center bg-secondary bg-opacity-10 border-success border border-3 p-3 container-lg rounded">
       <table class="table table-bordered table-hover">
@@ -74,5 +77,6 @@
       </table>
     </div>
   </div>
+</div>
 </div>
 @endsection

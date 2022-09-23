@@ -25,4 +25,6 @@ Route::resource('user', App\Http\Controllers\UserController::class);
 
 Route::resource('product', App\Http\Controllers\ProductController::class);
 
+Route::resource('establishment', App\Http\Controllers\EstablishmentController::class);
+
 });
