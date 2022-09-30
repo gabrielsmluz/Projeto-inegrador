@@ -44,7 +44,22 @@ class ProductController extends Controller
 
       $data['establishment_id']=\Auth::user()->establishment_id;
 
-      Product::create($data);
+      //$data['price_cents'] = (int)($data['price'] * 100);
+
+      $product = Product::create($data);
+
+      if($request->hasFile('image')) {
+
+        $imageFile = $request->file('image');
+        
+        $product->update([
+          'image_path' => $imageFile->storeAs(
+            "images/products/$product->id",
+            'image.jpg',
+            'public',
+          )  
+        ]);
+      }
 
       return redirect()->route('product.index');
     }
@@ -85,7 +100,7 @@ class ProductController extends Controller
 
       $product->update($data);
 
-      return redirect()->route('product.show', $product);
+      return redirect()->route('product.index');
     }
 
     /**

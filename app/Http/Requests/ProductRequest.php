@@ -26,7 +26,8 @@ class ProductRequest extends FormRequest
         return [
             'name'=>'required',
             'description'=>'required',
-            'price_cents'=>'required'
+            'price_cents'=>'required',
+            'image'=>'required|file',
 
         ];
     }
