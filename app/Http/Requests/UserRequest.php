@@ -30,8 +30,8 @@ class UserRequest extends FormRequest
           'phone'=>'required||min:11|max:255',
           'address'=>'required|string|min:8|max:255',
           'password'=>'required|string|min:8|max:255',
-          
-
+          'password_confirmation'=>'required|string|min:8|max:255',
+          'type'=>'required'
         ];
     }
 }

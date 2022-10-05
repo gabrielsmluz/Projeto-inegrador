@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid d-flex">
       <div class=justify-content-start style="width: 100%;display: inherit;">
-        <a class="navbar-brand" href="teste_background">Home</a>
+        <a class="navbar-brand" href="">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">

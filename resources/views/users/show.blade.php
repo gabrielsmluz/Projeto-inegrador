@@ -14,9 +14,7 @@
       <div class="d-flex m-1">
         <div class="d-flex flex-column p-1 w-50">
           <label for="inputNome" class="form-label">Nome *</label>
-          <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-            value="{{ old('name') }}" required autocomplete="name" autofocus
-            placeholder="{{ $user->name }}" disabled>
+          <input id="name" type="text" readonly class="form-control" name="name" value="{{ old('name') }}" placeholder="{{ $user->name }}">
         </div>
         <div class="d-flex flex-column p-1 w-50">
           <label for="phone" class="form-label">Telefone *</label>

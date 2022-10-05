@@ -35,7 +35,7 @@
           <label for="inputEndereço" class="form-label">Endereço *</label>
           <input type="text" class="form-control" id="inputEndereço" placeholder="Rua Saldanha Marinho"
             name="address">
-          @error('cpf')
+          @error('address')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
         </div>
@@ -50,7 +50,7 @@
       <div class="d-flex m-1">
         <div class="d-flex flex-column p-1 w-50">
           <label for="inputlogin" class="form-label">Email *</label>
-          <input type="email" class="form-control @error('email') is-invalid @enderror" id="inputlogin"
+          <input type="email" class="form-control" id="inputlogin"
             placeholder="seu-login123" name="email">
           @error('email')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
@@ -67,7 +67,7 @@
         <div class="d-flex flex-column p-1 w-25">
           <label for="password_confirmation" class="form-label">Confirmar Senha *</label>
           <input type="password" class="form-control" id="password_confirmation" placeholder="sua.senha.321"
-            name="password_confirmation" required autocomplete="new-password">
+            name="password_confirmation">
             @error('password_confirmation')
               <strong">{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
