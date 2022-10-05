@@ -18,13 +18,13 @@
           @error('name')
             <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
-          <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+          <input id="name" type="text" class="form-control" name="name"
             value="{{ old('name') }}" required autocomplete="name" autofocus
-            placeholder="Jõao Souza da Silva">
+            placeholder="Jõao Souza da Silva" >
         </div>
         <div class="d-flex flex-column p-1 w-50">
           <label for="phone" class="form-label">Telefone *</label>
-          <input type="text" class="form-control" id="phone" placeholder="4236264305" name="phone">
+          <input type="text" class="form-control" id="phone" placeholder="4236264305" name="phone" value="{{ old('phone') }}">
           @error('phone')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
@@ -34,14 +34,14 @@
         <div class="d-flex flex-column p-1 w-50">
           <label for="inputEndereço" class="form-label">Endereço *</label>
           <input type="text" class="form-control" id="inputEndereço" placeholder="Rua Saldanha Marinho"
-            name="address">
+            name="address" value="{{ old('address') }}">
           @error('address')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
         </div>
         <div class="d-flex flex-column p-1 w-50">
           <label for="CPF" class="form-label">CPF *</label>
-          <input type="text" class="form-control" id="cpf" placeholder="108.913.119.47" name="cpf">
+          <input type="text" class="form-control" id="cpf" placeholder="108.913.119.47" name="cpf" value="{{ old('cpf') }}">
           @error('cpf')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
@@ -51,7 +51,7 @@
         <div class="d-flex flex-column p-1 w-50">
           <label for="inputlogin" class="form-label">Email *</label>
           <input type="email" class="form-control" id="inputlogin"
-            placeholder="seu-login123" name="email">
+            placeholder="seu-login123" name="email" value="{{ old('email') }}">
           @error('email')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
@@ -59,7 +59,7 @@
         <div class="d-flex flex-column p-1 w-25">
           <label for="password" class="form-label">Senha *</label>
           <input type="password" class="form-control" id="password" placeholder="sua.senha.321"
-            name="password">
+            name="password" value="{{ old('password') }}">
             @error('password')
               <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
@@ -67,16 +67,16 @@
         <div class="d-flex flex-column p-1 w-25">
           <label for="password_confirmation" class="form-label">Confirmar Senha *</label>
           <input type="password" class="form-control" id="password_confirmation" placeholder="sua.senha.321"
-            name="password_confirmation">
+            name="password_confirmation" value="{{ old('password_confirmation') }}">
             @error('password_confirmation')
-              <strong">{{ "Esse campo deve ser preeenchido" }}</strong>
+              <strong>{{ "Esse campo deve ser preeenchido" }}</strong>
           @enderror
         </div>
       </div>
       <div class="d-flex flex-row pb-3">
         <div class="d-flex flex-column p-1 w-50">
           <label for="password_confirmation" class="form-label">Função</label>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" aria-label="Default select example" name="type" value="{{ old('type') }}">
             <option selected>Abra para selecionar sua função</option>
             <option value="1">Gerente</option>
             <option value="2">Funcionário</option>

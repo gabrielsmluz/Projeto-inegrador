@@ -9,7 +9,7 @@
   </script>
   <meta charset="utf-8">
   <title>Login</title>
-  @vite(['resources/js/app.js','resources/css/app.css'])
+  @vite(['resources/js/app.js'])
     <style>
       <blade import|%20url(%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DLato%3A300%3A400)%3B>body {
         margin: 0;

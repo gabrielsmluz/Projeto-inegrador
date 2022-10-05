@@ -40,7 +40,7 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $data = $request ->validated();
+        $data = $request->validated();
 
         $data['password'] = \Hash::make($data['password']);
 

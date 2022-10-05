@@ -17,7 +17,7 @@
 
     <div class="d-flex flex-column container-lg">
       <div
-        class="d-flex justify-content-center bg-secondary bg-opacity-10 border-success border border-3 p-3 container-lg rounded">
+        class="d-flex table-responsive justify-content-center bg-secondary bg-opacity-10 border-success border border-3 container-fluid p-3 rounded">
         <table class="table table-bordered table-hover">
           <thead>
             <tr>

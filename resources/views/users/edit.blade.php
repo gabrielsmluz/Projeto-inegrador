@@ -3,16 +3,16 @@
 @section('main_content')
 <div class="d-flex justify-content-center">
   <div
-    class="d-inline-flex justify-content-start bg-secondary bg-opacity-10 rounded border border-success border-2 p-1">
+    class="d-inline-flex justify-content-start bg-secondary bg-opacity-10 rounded border border-primary border-2 p-1">
     <h2>Alteração de Dados</h2>
   </div>
 </div>
 <form method="POST" action="{{ route('user.update', $user->id) }}">
   @csrf
   @method('PUT')
-  <div class="d-flex justify-content-center mt-4">
-    <div class="bg-secondary bg-opacity-10 rounded border border-success border-3 container-lg">
-      <div class="d-flex flex-row justify-content-center gap-3">
+  <div class="justify-content-center d-flex mt-4">
+    <div class="bg-secondary bg-opacity-10 rounded border border-primary border-2">
+      <div class="d-flex flex-row justify-content-center gap-3 container">
         <div class="flex-column">
           <div class="flex-column mt-3 form-floating">
             <input id="name" type="text" class="form-control form-control-sm" name="name"

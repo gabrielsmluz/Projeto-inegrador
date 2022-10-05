@@ -25,9 +25,9 @@ class UserRequest extends FormRequest
     {
         return [
           'name'=>'required|string|min:2|max:255',
-          'email'=>'required|string|unique:users|min:5|max:255',
+          'email'=>'required|unique:users|min:5|max:255',
           'cpf'=>'required|string|min:11|max:255',
-          'phone'=>'required||min:11|max:255',
+          'phone'=>'required|string|min:11|max:255',
           'address'=>'required|string|min:8|max:255',
           'password'=>'required|string|min:8|max:255',
           'password_confirmation'=>'required|string|min:8|max:255',

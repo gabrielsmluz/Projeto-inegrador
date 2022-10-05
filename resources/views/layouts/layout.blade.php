@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="resources/css/style.css">
   <meta charset="utf-8">
   <title>@yield('title')</title>
-  @vite(['resources/js/app.js','resources/css/app.css'])
+  @vite(['resources/js/app.js'])
 </head>
 
 
