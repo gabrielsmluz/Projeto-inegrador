@@ -8,13 +8,11 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="@yield('style')">
   <meta charset="utf-8">
   <title>@yield('title')</title>
   @vite(['resources/js/app.js'])
 </head>
-
-
 
 <body>
   <nav class="navbar navbar-expand-lg bg-light">

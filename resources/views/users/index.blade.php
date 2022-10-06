@@ -1,21 +1,21 @@
 @extends('layouts.layout')
+@section('style','resources/css/style.css')
 @section('title','Funcionários')
 @section('main_content')
 <div class="d-flex justify-content-center">
-  <div class="bg-secondary bg-opacity-10 rounded border border-primary border-3 p-1">
+  <div class="header p-1">
     <h2 class="">Vizualização de Funcionários</h2>
   </div>
 </div>
 <div class="d-flex flex-column container-md">
-  <div class="d-flex justify-content-end p-3">
+  <div class="d-flex justify-content-end ">
     <a class="" href="{{ route('user.create') }}">
       <button type="button" class="btn btn-primary">Adicionar Novo Funcionário</button>
     </a>
 
   </div>
-  <div
-    class="d-flex table-responsive justify-content-center bg-secondary bg-opacity-10 border-primary border border-2 rounded ms-auto">
-    <table class="table table-bordered table-hover mt-3">
+  <div class="table-responsive">
+    <table class="table table table-bordered table-dark table-hover mt-3">
       <thead>
         <tr>
           <th scope="col">ID</th>
