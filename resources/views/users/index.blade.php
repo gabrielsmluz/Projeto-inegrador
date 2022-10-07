@@ -1,10 +1,10 @@
 @extends('layouts.layout')
-@section('style','resources/css/style.css')
+@section('background','background_users')
 @section('title','Funcionários')
 @section('main_content')
 <div class="d-flex justify-content-center">
-  <div class="header p-1">
-    <h2 class="">Vizualização de Funcionários</h2>
+  <div class="header h2 p-1">
+    <h2 class="">Lista de Funcionários</h2>
   </div>
 </div>
 <div class="d-flex flex-column container-md">
@@ -34,7 +34,7 @@
             <th scope="row">{{ $user->id }}</th>
             <td>{{ $user->name }}</td>
             <td>{{ $user->cpf }}</td>
-            <td>{{ $user->adress }}</td>
+            <td>{{ $user->address }}</td>
             <td>{{ $user->phone }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->type == 'manager'?'Gerente':'Funcionário' }}

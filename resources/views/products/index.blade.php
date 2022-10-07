@@ -1,10 +1,11 @@
 @extends('layouts.layout')
+@section('background','background_products')
 @section('title','Produtos')
 @section('main_content')
 <div style="" class="container">
   <div class="d-flex justify-content-center">
     <div
-      class="d-inline-flex justify-content-start bg-secondary bg-opacity-10 rounded border border-success border-3 p-1">
+      class="d-inline-flex justify-content-start header h2 pt-2 p-1">
       <h2>Lista de Produtos</h2>
     </div class="">
   </div>

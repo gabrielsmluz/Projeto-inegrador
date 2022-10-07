@@ -1,12 +1,22 @@
-body {
+.background_products {
   margin: 0;
   background-image: url('/storage/app/public/images/products/background_produtos.webp');
   background-size: cover;
-
-
 }
 
-h2 {
+.background_users {
+  margin: 0;
+  background-image: url('/storage/app/public/images/users/background_users.jpg');
+  background-size: cover;
+}
+
+.background_register {
+  margin: 0;
+  background-image: url('/storage/app/public/images/register/background_register.jpg');
+  background-size: cover;
+}
+
+.h2 {
   color: whitesmoke;
 }
 
@@ -22,6 +32,15 @@ h2 {
   border-color: hsl(216, 98%, 52%);
   border-radius: 10px;
   background-color: #000000d5;
+}
+
+.smcontainer {
+  max-width: 600px;
+}
+
+.label1 {
+  font-weight: bolder;
+  margin-left: 7px;
 }
 
 

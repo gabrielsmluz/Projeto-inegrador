@@ -14,7 +14,7 @@
   @vite(['resources/js/app.js'])
 </head>
 
-<body>
+<body class="@yield('background')">
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid d-flex">
       <div class=justify-content-start style="width: 100%;display: inherit;">

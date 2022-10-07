@@ -1,13 +1,13 @@
 @extends('layouts.layout')
-@section('style','resources/css/style_login.css')
+@section('body_style','.')
 @section('title','Login')
 @section('main_content')
 <main class="form-signin">
   <div
-    class="container-sm d-flex justify-content-center bg-light bg-gradient bg-opacity-25 border-primary border-opacity-25 border border-3 p-3 container-lg rounded">
+    class="d-flex justify-content-center ms-auto rounded">
     <form method="POST" action="{{ route('login') }}">
       @csrf
-      <h1 class="text-black text-opacity-50 h3 mb-3 fw-normal">Login de Funcionários</h1>
+      <h3 class="text-black mb-3 fw-normal">Login de Funcionários</h3>
       <div class="form-floating">
         <input id="email" type="floatingInput" class="form-control" name="email"
           value="{{ old('email') }}" required autocomplete="email" autofocus>
