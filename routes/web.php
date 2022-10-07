@@ -27,4 +27,6 @@ Route::resource('product', App\Http\Controllers\ProductController::class);
 
 Route::resource('establishment', App\Http\Controllers\EstablishmentController::class);
 
+Route::resource('menu', App\Http\Controllers\MenuController::class);
+
 });

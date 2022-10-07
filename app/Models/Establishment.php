@@ -13,8 +13,8 @@ class Establishment extends Model
       'cnpj',
       'trading_name',
       'company_name',
-      'address',
-      'phone'
+      'establishment_address',
+      'establishment_phone'
     ];
 
     public function users()

@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\UserRequest;
-use App\Models\User;
+use App\Http\Requests\MenuRequest;
+use App\Models\Menu;
 
-class UserController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-      $users = User::all();
+        $menus = Menu::all();
 
-      return view('users.index', ['users'=> $users]);
+        return view('menus.index', ['menus'=> $menus]);
     }
 
     /**
@@ -27,9 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-      $users = User::all();
-
-      return view('users.create', ['users'=> $users]);
+        return view('menus.create');
     }
 
     /**
@@ -38,15 +36,17 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UserRequest $request)
+    public function store(MenuRequest $request)
     {
         $data = $request->validated();
 
-        $data['password'] = \Hash::make($data['password']);
+        dd($data);
 
-        User::create($data);
+        $data['establishment_id']=\Auth::user()->establishment_id;
 
-        return redirect()->route('users.index');
+        Menu::create($data);       
+
+        return redirect()->route('menu.index');
     }
 
     /**
@@ -55,9 +55,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Menu $menu)
     {
-        return view ('users.show', ['user'=>$user]);
+        return view ('menus.show', ['menu'=>$menu]);
     }
 
     /**
@@ -66,9 +66,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Menu $menu)
     {
-        return view('users.edit', ['user'=> $user]);
+        return view('menus.edit', ['menus'=> $menus]);
     }
 
     /**
@@ -78,17 +78,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Menu $menu)
     {
         $data = $request->all();
-        if ($data['password'] === null) {
-          unset($data['password']);
-        } else {
-          $data['password'] = \Hash::make($data['password']);
-        }
-        $user->update($data);
 
-        return redirect()->route('user.show', $user);
+        $menu->update($data);
+
+        return redirect()->route('menu.show', $menu);
     }
 
     /**
@@ -97,9 +93,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Menu $menu)
     {
-        $user->delete();
-        return redirect()->route('users.index');
+        $menu->delete();
+        return redirect()->route('menu.index');
     }
 }

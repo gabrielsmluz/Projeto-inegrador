@@ -1,6 +1,6 @@
 .background_products {
   margin: 0;
-  background-image: url('/storage/app/public/images/products/background_produtos.webp');
+  background-image: url('/storage/app/public/images/products/background_products.jpg');
   background-size: cover;
 }
 
@@ -16,7 +16,17 @@
   background-size: cover;
 }
 
+.background_menus {
+  margin: 0;
+  background-image: url('/storage/app/public/images/menus/background_menus.webp');
+  background-size: cover;
+}
+
 .h2 {
+  color: whitesmoke;
+}
+
+.p1 {
   color: whitesmoke;
 }
 

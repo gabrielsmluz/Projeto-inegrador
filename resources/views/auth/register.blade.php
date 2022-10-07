@@ -60,12 +60,7 @@
           </div>
           <div class="d-flex flex-column">
             <div class="flex-column mt-3 form-floating">
-              <input id="email" type="text" class="form-control form-control-sm" name="email"
-                value="{{ old('email') }}" placeholder="DO NOT ERASE">
-              <label class="">Email</label>
-              @error('email')
-                <span class="invalid-feedback" role="alert" name="email">
-                  {{ "Esse campo deve ser preenchido" }}
+              <input id="email" type="teestablishment_addressr preenchido" }}
                 </span>
               @enderror
             </div>

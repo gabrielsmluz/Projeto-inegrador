@@ -25,8 +25,7 @@
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1">Preço, R$:</span>
-          <input name="price_cents" type="text" class="form-control" placeholder="123,456" aria-label="preco1"
-            aria-describedby="basic-addon1">
+          <input name="price_cents" type="text" class="form-control" placeholder="123,456" aria-label="preco1">
           @error('price_cents')
             <span class="invalid-feedback" role="alert">
               <strong>{{ $message }}</strong>

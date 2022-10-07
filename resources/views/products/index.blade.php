@@ -15,7 +15,6 @@
         <button type="button" class="btn btn-primary">Adicionar Novo Produto</button>
       </a>
     </div>
-
     <div class="d-flex flex-column container-lg">
     <div class="table-responsive">
     <table class="table table table-bordered table-dark table-hover mt-3">
