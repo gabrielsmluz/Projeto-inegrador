@@ -17,9 +17,10 @@
     <table class="table table-bordered table-dark table-hover mt-3">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Título</th>
           <th scope="col">Descrição</th>
-          <th scope="col">Ativo</th>
+          <th scope="col">Atividade</th>
           <th scope="col">Ações</th>
         </tr>
       </thead>
@@ -29,8 +30,8 @@
             <th scope="row">{{ $menu->id }}</th>
             <td>{{ $menu->name }}</td>
             <td>{{ $menu->description }}</td>
-            <td>{{ $menu->is_available }},***</td>
-            <td>
+            <td>{{ $menu->is_active }}</td>
+            <td class="d-flex justify-content-evenly">
               <button class="rounded border-primary" type="button" name="showbutton">
                 <a href="{{ route('menu.show', $menu->id) }}">
                   <i class="bi bi-search"></i>

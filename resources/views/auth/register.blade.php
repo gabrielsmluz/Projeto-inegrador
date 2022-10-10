@@ -52,7 +52,7 @@
                 value="{{ old('cpf') }}" placeholder="DO NOT ERASE">
               <label class="">CPF</label>
               @error('cpf')
-                <span class="invalid-feedback" role="alert" name="CPF">
+                <span class="invalid-feedback" role="alert" name="cpf">
                   {{ "Esse campo deve ser preenchido" }}
                 </span>
               @enderror
@@ -60,13 +60,18 @@
           </div>
           <div class="d-flex flex-column">
             <div class="flex-column mt-3 form-floating">
-              <input id="email" type="teestablishment_addressr preenchido" }}
+              <input id="email" type="email" class="form-control form-control-sm" name="email"
+                value="{{ old('email') }}" placeholder="DO NOT ERASE">
+              <label class="">Email</label>
+              @error('email')
+                <span class="invalid-feedback" role="alert" name="email">
+                  {{ "Esse campo deve ser preenchido" }}
                 </span>
               @enderror
             </div>
             <div class="flex-column mt-3 form-floating">
               <input id="password" type="password" class="form-control form-control-sm" name="password"
-                value="{{ old('password') }}" placeholder="DO NOT ERASE">
+                value="{{ old('') }}" placeholder="DO NOT ERASE">
               <label class="">Senha</label>
               @error('password')
                 <span class="invalid-feedback" role="alert" name="password">
@@ -77,7 +82,7 @@
             <div class="flex-column mt-3 form-floating">
               <input id="password_confirmation" type="password" class="form-control form-control-sm"
                 name="password_confirmation"
-                value="{{ old('password_confirmation') }}" placeholder="DO NOT ERASE">
+                value="{{ old('') }}" placeholder="DO NOT ERASE">
               <label class="">Confirmar Senha</label>
               @error('password_confirmation')
                 <span class="invalid-feedback" role="alert" name="password_confirmation">

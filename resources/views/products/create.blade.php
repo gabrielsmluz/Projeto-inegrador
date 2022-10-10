@@ -6,64 +6,66 @@
   <div class="d-inline-flex header h2 p-1">
     <h2>Criação de Produtos</h2>
   </div class="">
-  <div class="d-flex p-3"></div>
 </div>
 <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
   @csrf
-  <div class="d-flex flex-column container header p-3 mt-3">
-    <div class="d-flex flex-column">
-      <div class="d-flex flex-row">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Nome</span>
-          <input name="name" type="text" class="form-control" placeholder="Brigadeiro" aria-label="nome1"
-            aria-describedby="basic-addon1">
+  <div class="d-flex flex-column smcontainer container header p-3 mt-3">
+    <div class="d-flex flex-column gap-1">
+      <div class="d-flex flex-row gap-3 justify-content-center">
+        <div class="flex-column mt-3 form-floating flex-fill">
+          <input id="name" type="text" class="form-control form-control-sm" name="name"
+            value="{{ old('name') }}" placeholder="DO NOT ERASE">
+          <label for="inputNome" class=" label1">Nome</label>
           @error('name')
-            <div class="text-danger">
-              {{ $message }}
-            </div>
+            <span class="invalid-feedback" role="alert" name="name">
+              {{ "Esse campo deve ser preenchido" }}
+            </span>
           @enderror
         </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Preço, R$:</span>
-          <input name="price_cents" type="text" class="form-control" placeholder="123,456" aria-label="preco1">
+        <div class="flex-column mt-3 form-floating flex-fill">
+          <input id="price_cents" type="text" class="form-control form-control-sm" name="price_cents"
+            value="{{ old('price_cents') }}" placeholder="DO NOT ERASE">
+          <label for="inputNome" class=" label1">Preço</label>
           @error('price_cents')
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+            <span class="invalid-feedback" role="alert" name="price_cents">
+              {{ "Esse campo deve ser preenchido" }}
             </span>
           @enderror
         </div>
       </div>
-      <div class="d-flex flex-row">
-        <div class="d-flex w-75 input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Descrição</span>
-          <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
+      <div class="d-flex flex-row gap-3 justify-content-center">
+        <div class="flex-column mt-3 form-floating flex-fill">
+          <textarea id="description" class="form-control" placeholder="DO NOT ERASE"
+            name="description"></textarea>
+          <label class="label1" for="floatingTextarea">Descrição</label>
           @error('description')
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+            <span class="invalid-feedback" role="alert" name="description">
+              {{ "Esse campo deve ser preenchido" }}
             </span>
           @enderror
         </div>
+        <div class="form-floating align-self-center my-3">
+          <select id="floatingSelect" class="form-select form-select-lg bg-white  fw-bold flex-fill"
+            name="is_available">
+            <option selected>Clique para selecionar</option>
+            <option value="1">Disnonível</option>
+            <option value="0">Indisponível</option>
+          </select>
+          <label class="label1" for="floatingSelect">Disponibilidade</label>
+        </div>
       </div>
       <div class="d-flex flex-row">
-        <div class="input-group">
-          <input type="file" class="form-control" id="inputGroupFile02" name="image" accept="image/*">
+        <div class="input-group mt-2 mb-2 ">
+          <input type="file" class="form-control" id="inputGroupFile02" name="image">
           <label class="input-group-text" for="inputGroupFile02">Upload</label>
         </div>
-        <div class="d-flex w-50 h2 border rounded-border m-3">
-          div para adicionar imagens(temp)
+        <div class="d-flex w-50 my-2 ms-2 ">
+          <button type="submit" class="mx-2 btn btn-lg btn-success">
+            {{ __('Criar Produto') }}
+          </button>
         </div>
-        <button type="submit" class=" btn btn-success btn">
-          {{ __('Finalizar') }}
-        </button>
       </div>
     </div>
   </div>
 </form>
-
-@error('price_cents')
-  <span class="invalid-feedback" role="alert">
-    <strong>{{ $message }}</strong>
-  </span>
-@enderror
-
 @endsection

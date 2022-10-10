@@ -13,10 +13,10 @@ class Product extends Model
        'name',
        'description',
        'price_cents',
+       'is_available',
        'establishment_id',
        'image_path',
        //'price',
-       //'is_available',
      ];
 
      public function establishment()

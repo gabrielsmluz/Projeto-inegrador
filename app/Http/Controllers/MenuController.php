@@ -40,7 +40,7 @@ class MenuController extends Controller
     {
         $data = $request->validated();
 
-        dd($data);
+        //dd($data);
 
         $data['establishment_id']=\Auth::user()->establishment_id;
 
@@ -68,7 +68,7 @@ class MenuController extends Controller
      */
     public function edit(Menu $menu)
     {
-        return view('menus.edit', ['menus'=> $menus]);
+        return view('menus.edit', ['menu'=> $menu]);
     }
 
     /**
@@ -84,7 +84,7 @@ class MenuController extends Controller
 
         $menu->update($data);
 
-        return redirect()->route('menu.show', $menu);
+        return redirect()->route('menu.index', $menu);
     }
 
     /**

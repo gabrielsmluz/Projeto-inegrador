@@ -67,23 +67,13 @@
             </span>
           @enderror
         </div>
-        <div style="--bs-border-opacity: .3;"
-          class="d-flex flex-column rounded border mt-auto ms-auto me-auto mb-2 pb-1 pt-1 ps-2 pe-2 border-1 border-secondary bg-light">
-          <label for="type" class="">Função</label>
-          <div class="d-flex flex-row gap-3">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="type" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Gerente
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="type" id="flexRadioDefault2" checked>
-              <label class="form-check-label" for="type">
-                Funcionário
-              </label>
-            </div>
-          </div>
+        <div class="mt-3 d-flex form-floating">
+          <select name="type" class=" form-select" id="floatingSelect">
+            <option selected>Abrir o menu de seleção</option>
+            <option name="type" value="manager">Gerente</option>
+            <option name="type" value="employee">Funionário</option>
+          </select>
+          <label class="label1" for="floatingSelect">Função</label>
         </div>
       </div>
       <div class="d-flex flex-row">
@@ -99,10 +89,11 @@
         </div>
         <div class="flex-column mt-3 form-floating">
           <input id="password_confirmation" type="password" class="form-control form-control-sm"
-            name="password_confirmation" value="{{ old('password_confirmation') }}" placeholder="DO NOT ERASE">
+            name="password_confirmation" value="{{ old('password_confirmation') }}"
+            placeholder="DO NOT ERASE">
           <label class="label1">Confirmar Senha</label>
           @error('password_confirmation')
-            <span class="invalid-feedback" role="alert" name="password_confirmation">
+            <span class="invalid-feedback" role="alert" name="password_confirmation" value="{{ old('password_confirmation') }}">
               {{ "Esse campo deve ser preenchido" }}
             </span>
           @enderror
@@ -111,7 +102,7 @@
       <div class="d-flex justify-content-center flex-row">
         <div class="d-flex p-3">
           <button type="submit" class=" btn btn-success btn-lg">
-            {{ __('Alterar Dados') }}
+            {{ __('Cadastrar Dados') }}
           </button>
         </div>
       </div>

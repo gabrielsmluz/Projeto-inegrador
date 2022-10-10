@@ -35,10 +35,10 @@
                 <th scope="row">{{ $product->id }}</th>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->description }}</td>
-                <td>{{ $product->price_cents }},***</td>
-                <td>{{ $product->is_available }}</td>
+                <td>R$:{{ $product->price_cents }},00</td>
+                <td>{{ $product->is_available}}</td>
                 <td>{{ $product->establishment_id }}</td>
-                <td>
+                <td class="d-flex justify-content-evenly">
                   <button class="rounded border-primary" type="button" name="showbutton">
                     <a href="{{ route('product.show', $product->id) }}">
                       <i class="bi bi-search"></i>

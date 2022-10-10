@@ -46,7 +46,7 @@ class UserController extends Controller
 
         User::create($data);
 
-        return redirect()->route('users.index');
+        return redirect()->route('user.index');
     }
 
     /**
@@ -100,6 +100,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('users.index');
+        return redirect()->route('user.index');
     }
 }
