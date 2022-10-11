@@ -4,8 +4,7 @@
 @section('main_content')
 <div style="" class="container">
   <div class="d-flex justify-content-center">
-    <div
-      class="d-inline-flex justify-content-start header h2 pt-2 p-1">
+    <div class="d-inline-flex justify-content-start header h2 pt-2 p-1">
       <h2>Lista de Produtos</h2>
     </div class="">
   </div>
@@ -16,8 +15,8 @@
       </a>
     </div>
     <div class="d-flex flex-column container-lg">
-    <div class="table-responsive">
-    <table class="table table table-bordered table-dark table-hover mt-3">
+      <div class="table-responsive">
+        <table class="table table table-bordered table-dark table-hover mt-3">
           <thead>
             <tr>
               <th scope="col">ID</th>
@@ -36,7 +35,7 @@
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->description }}</td>
                 <td>R$:{{ $product->price_cents }},00</td>
-                <td>{{ $product->is_available}}</td>
+                <td>{{ $product->is_available }}</td>
                 <td>{{ $product->establishment_id }}</td>
                 <td class="d-flex justify-content-evenly">
                   <button class="rounded border-primary" type="button" name="showbutton">

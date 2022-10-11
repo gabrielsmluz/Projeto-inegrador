@@ -7,12 +7,12 @@
     <h2 class="">Gerenciamento de Cardápios</h2>
   </div>
 </div>
-<div class="container">
-<div class="d-flex justify-content-end p-3">
-      <a class="" href="{{ route('menu.create') }}">
-        <button type="button" class="btn btn-primary">Adicionar Novo Produto</button>
-      </a>
-    </div>
+<div class="container mt-5">
+  <div class="d-flex justify-content-end">
+    <a class="" href="{{ route('menu.create') }}">
+      <button type="button" class="btn btn-primary">Criar Novo Cardápio</button>
+    </a>
+  </div>
   <div class="table-responsive">
     <table class="table table-bordered table-dark table-hover mt-3">
       <thead>

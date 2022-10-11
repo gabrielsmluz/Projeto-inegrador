@@ -43,9 +43,21 @@
   border-radius: 10px;
   background-color: #000000d5;
 }
+/*il1 = InputLabel1*/
+.il1 {
+  min-width: 180px;
+}
+
+.il2 {
+  width: 180px;
+}
 
 .smcontainer {
   max-width: 600px;
+}
+
+.lgcontainer {
+  max-width: 1000px;
 }
 
 .label1 {

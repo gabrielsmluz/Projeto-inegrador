@@ -9,23 +9,27 @@
 </div>
 <div class="">
   <div class="d-flex justify-content-center">
-    <div class="table p1">
-      <div class="d-flex flex-row justify-content-evenly">
-        <div class="d-flex align-items-end">
-          <p class="text-start">
-            Nome: cardápio principal <br>
-            Criado em: 14/06/2022 <br>
-            Cardápio ativo? Sim <br>
+    <div class="table lgcontainer p1 p-3">
+      <div class="d-flex flex-row justify-content-between">
+        <div class="d-flex align-items-center">
+          <p class="text-start ">
+            ID : {{ $menu->id }} <br>
+            Nome : {{ $menu->name }} <br>
+            Criado em : {{ $menu->created_at }} <br>
+            Atuazlizado em : {{ $menu->updated_at }} <br>
+            Atividade : {{ $menu->is_active }}<br>
+            Descrição : {{ $menu->description }}<br>
           </p>
         </div>
         <div class="d-flex flex-column p-1">
-          <div class="d-flex flex-row">
-            Ativar/Desativar
-            <label class="d-flex toggle justify-content-center m-1" for="myToggle">
-              <input class="toggle__input" name="" type="checkbox" id="myToggle">
-              <div class="toggle__fill"></div>
-            </label>
-          </div>
+        <div class="d-flex form-floating">
+          <select id="floatingSelect" class="il2 form-select form-select-lg bg-white"
+            name="is_active" value="{{ $menu->is_active }}">
+            <option selected value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+          </select>
+          <label class="label1 text-dark mt-1" for="floatingSelect">Atividade</label>
+        </div>
           <hr>
           <div class="d-flex flex-row">
             <div class="d-flex">
@@ -44,7 +48,7 @@
     </div>
   </div>
   <div class="d-flex justify-content-center table-responsive">
-    <table class="table p1 table-hover">
+    <table class="table p1 table-hover lgcontainer">
       <thead>
         <tr>
           <th scope="col">Título/Produto</th>

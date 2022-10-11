@@ -93,7 +93,8 @@
             placeholder="DO NOT ERASE">
           <label class="label1">Confirmar Senha</label>
           @error('password_confirmation')
-            <span class="invalid-feedback" role="alert" name="password_confirmation" value="{{ old('password_confirmation') }}">
+            <span class="invalid-feedback" role="alert" name="password_confirmation"
+              value="{{ old('password_confirmation') }}">
               {{ "Esse campo deve ser preenchido" }}
             </span>
           @enderror

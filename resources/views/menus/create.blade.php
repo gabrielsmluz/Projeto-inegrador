@@ -7,13 +7,13 @@
     <h2>Criação de Cardápio</h2>
   </div class="">
 </div>
-<form method="POST" action="{{ route('menu.store') }}">
+<form class="d-flex mt-5" method="POST" action="{{ route('menu.store') }}">
   @csrf
-  <div class="d-flex mt-3 table smcontainer justify-content-center container-lg">
+  <div class="d-flex mt-3 p-3 table smcontainer justify-content-center container-lg">
     <div class="d-flex flex-column">
       <div class="d-flex flex-row">
-        <div class="flex-column mt-3 form-floating">
-          <input id="name" type="text" class="form-control form-control-sm" name="name"
+        <div class="flex-column form-floating flex-fill">
+          <input id="name" type="text" class="form-control" name="name"
             value="{{ old('name') }}" placeholder="DO NOT ERASE">
           <label for="inputNome" class=" label1">Nome do Cardápio</label>
           @error('name')
@@ -22,25 +22,28 @@
             </span>
           @enderror
         </div>
-        <div class="flex-column mt-3 form-floating">
-          <input id="description" type="text" class="form-control form-control-sm" name="description"
-            value="{{ old('description') }}" placeholder="DO NOT ERASE">
-          <label for="inputNome" class=" label1">Descrição</label>
+        <div class="d-flex form-floating">
+          <select id="floatingSelect" class="il2 form-select form-select-lg bg-white"
+            name="is_available" value="{{ old('is_available') }}">
+            <option selected value="Disponível">Disponível</option>
+            <option value="Indisponível">Indisponível</option>
+          </select>
+          <label class="label1 mt-1" for="floatingSelect">Disponibilidade</label>
+        </div>
+      </div>
+      <div class="d-flex flex-row">
+      <div class="input-group">
+          <span class="input-group-text">Descrição</span>
+          <textarea id="description" class="form-control" placeholder=""
+            name="description" value="{{ old('description') }}"></textarea>
           @error('description')
             <span class="invalid-feedback" role="alert" name="description">
               {{ "Esse campo deve ser preenchido" }}
             </span>
           @enderror
         </div>
-      </div>
-      <div class="d-flex ms-2 flex-row">
-        <select class="form-select-lg bg-white fs-5 my-4 fw-bold" name="is_active">
-          <option value="0">Selecione uma das opções</option>
-          <option value="1">Ativo</option>
-          <option value="0">Inativo</option>
-        </select>
-        <div class="d-flex ms-3 my-2 p-3">
-          <button type="submit" class=" btn btn-success btn-lg">
+        <div class="d-flex align-self-end">
+          <button type="submit" class="il2 btn btn-success btn-lg">
             {{ __('Criar Cardápio') }}
           </button>
         </div>
