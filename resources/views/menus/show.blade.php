@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('background','background_menus')
-@section('title','Criar Cardápio')
+@section('title','Edição do Cardápio')
 @section('main_content')
 <div class="d-flex justify-content-center">
   <div class="header h2 pt-2 p-1">
@@ -35,7 +35,7 @@
             <div class="d-flex">
               <label for="inputAddProdutos" class="form-label">Adicionar Produtos:</label>
               <select id="inputAddProdutos" class="form-select">
-                <option selected>Selecionar Produtos</option>
+                <option selected>Selecionar Produtos</option>              
                 <option>...</option>
               </select>
               <div class="d-flex p-1">

@@ -10,10 +10,11 @@
   background-size: cover;
 }
 
-.background_register {
+.background_login {
   margin: 0;
-  background-image: url('/storage/app/public/images/register/background_register.jpg');
+  background-image: url('/storage/app/public/images/login/background_login.webp');
   background-size: cover;
+  offset-position: 700px;
 }
 
 .background_menus {

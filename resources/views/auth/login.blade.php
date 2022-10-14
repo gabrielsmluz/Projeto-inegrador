@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-@section('body_style','.')
+@section('background','background_login')
 @section('title','Login')
 @section('main_content')
 <main class="form-signin">

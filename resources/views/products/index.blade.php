@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('background','background_products')
-@section('title','Produtos')
+@section('title','Lista de Produtos')
 @section('main_content')
 <div style="" class="container">
   <div class="d-flex justify-content-center">
