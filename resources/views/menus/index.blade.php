@@ -78,5 +78,9 @@
     </table>
   </div>
 </div>
+<div class=" d-flex justify-content-center">
+<img class="" src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl={{urlencode(route('menu.public.show', $menu->id))}}" >
+<h5>Link compartilhável</h5>
+<a href="{{route('menu.public.show', $menu->id)}}">{{route('menu.public.show', $menu->id)}}</a>
 </div>
 @endsection

@@ -24,9 +24,9 @@
         </div>
         <div class="d-flex form-floating">
           <select id="floatingSelect" class="il2 form-select form-select-lg bg-white"
-            name="is_available" value="{{ old('is_available') }}">
-            <option selected value="Disponível">Disponível</option>
-            <option value="Indisponível">Indisponível</option>
+            name="is_active" value="{{ old('is_active') }}">
+            <option selected value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
           </select>
           <label class="label1 mt-1" for="floatingSelect">Disponibilidade</label>
         </div>

@@ -47,8 +47,8 @@
         <div class="d-flex form-floating align-self-center my-3">
           <select id="floatingSelect" class="il1 mt-3 form-select form-select-lg bg-white"
             name="is_available" value="{{ old('is_available') }}">
-            <option selected value="1">Disponível</option>
-            <option value="0">Indisponível</option>
+            <option selected value="Disponível">Disponível</option>
+            <option value="Indisponível">Indisponível</option>
           </select>
           <label class="label1 mt-3" for="floatingSelect">Disponibilidade</label>
         </div>

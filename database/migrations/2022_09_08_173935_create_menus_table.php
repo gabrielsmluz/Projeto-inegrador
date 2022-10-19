@@ -17,7 +17,7 @@ return new class extends Migration
         $table->id();
         $table->string('name');
         $table->text('description')->nullable();
-        $table->boolean('is_active');
+        $table->string('is_active');
         $table->foreignId('establishment_id')
           ->constrained('establishments')
           ->cascadeOnDelete();

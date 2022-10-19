@@ -14,7 +14,6 @@
   margin: 0;
   background-image: url('/storage/app/public/images/login/background_login.webp');
   background-size: cover;
-  offset-position: 700px;
 }
 
 .background_menus {
@@ -29,6 +28,10 @@
 
 .p1 {
   color: whitesmoke;
+}
+
+.p2 {
+  color: black;
 }
 
 .header {

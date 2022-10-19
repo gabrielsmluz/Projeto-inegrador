@@ -15,7 +15,7 @@
 </head>
 
 <body class="@yield('background')">
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="mb-3 navbar navbar-expand-lg bg-light">
     <div class="container-fluid d-flex">
       <div class=justify-content-start style="width: 100%;display: inherit;">
         <a class="navbar-brand" href="">Home</a>
@@ -76,7 +76,6 @@
       @endguest
     </div>
   </nav>
-  <div class="d-flex p-3"></div>
   @yield('main_content')
 </body>
 

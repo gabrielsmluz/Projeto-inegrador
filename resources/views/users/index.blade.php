@@ -68,10 +68,10 @@
                         aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex justify-content-evenly">
+                    <form method="POST"
+                        action="{{ route('user.destroy', $user->id) }}">
                       <button type="button" class="btn btn-secondary"
                         data-bs-dismiss="modal">Cancelar</button>
-                      <form method="POST"
-                        action="{{ route('user.destroy', $user->id) }}">
                         @csrf
                         @method('delete')
                         <button type="submit" class="btn btn-danger">Sim, Remover</button>

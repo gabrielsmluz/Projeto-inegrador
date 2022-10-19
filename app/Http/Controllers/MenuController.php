@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\MenuRequest;
 use App\Models\Menu;
+Use App\Models\Product;
 
 class MenuController extends Controller
 {
@@ -18,6 +19,11 @@ class MenuController extends Controller
         $menus = Menu::all();
 
         return view('menus.index', ['menus'=> $menus]);
+    }
+
+    public function showPublic(Menu $menu)
+    {
+        return view('menus.public.show',['menu'=>$menu]);
     }
 
     /**
@@ -57,7 +63,13 @@ class MenuController extends Controller
      */
     public function show(Menu $menu)
     {
-        return view ('menus.show', ['menu'=>$menu]);
+        $addableProducts = Product::where('establishment_id', $menu->establishment_id)
+        ->whereDoesntHave('menus',function($query) use ($menu) {
+            $query->where('menus.id', $menu->id);
+        })
+        ->get();
+
+        return view ('menus.show', ['menu' => $menu, 'addableProducts' => $addableProducts]);
     }
 
     /**
