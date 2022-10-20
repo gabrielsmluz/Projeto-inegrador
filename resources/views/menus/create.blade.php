@@ -35,7 +35,7 @@
       <div class="input-group">
           <span class="input-group-text">Descrição</span>
           <textarea id="description" class="form-control" placeholder=""
-            name="description" value="{{ old('description') }}"></textarea>
+            name="description" value="">{{ old('description') }}</textarea>
           @error('description')
             <span class="invalid-feedback" role="alert" name="description">
               {{ "Esse campo deve ser preenchido" }}

@@ -54,7 +54,7 @@
                     href="{{ route('product.index') }}">Produtos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="">Ver Pedidos</a>
+                  <a class="nav-link active" href="{{ route('order.index') }}">Ver Pedidos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link active"

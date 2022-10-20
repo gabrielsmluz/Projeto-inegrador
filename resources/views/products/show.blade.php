@@ -36,8 +36,8 @@
       <div class="d-flex flex-row gap-3 justify-content-center">
         <div class="input-group mt-3">
           <span class="input-group-text">Descrição</span>
-          <textarea id="description" readonly class="form-control" placeholder="" value="{{ $product->description }}"
-            name="description"></textarea>
+          <textarea id="description" readonly class="form-control" placeholder="" value=""
+            name="description">{{ $product->description }}</textarea>
           @error('description')
             <span class="invalid-feedback" role="alert" name="description">
               {{ "Esse campo deve ser preenchido" }}

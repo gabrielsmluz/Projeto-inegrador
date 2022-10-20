@@ -1,5 +1,6 @@
 @extends('layouts.layout')
-@section('title','Ver pedidos')
+@section('background','background_users')
+@section('title','Ver Pedidos')
 @section('main_content')
   <div class="d-flex flex-column p-2">
     <div class="d-flex justify-content-center">

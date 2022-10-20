@@ -36,7 +36,7 @@
       <div class="input-group">
           <span class="input-group-text">Descrição</span>
           <textarea id="description" class="form-control" placeholder=""
-            name="description" value="{{ $menu->description }}"></textarea>
+            name="description" value="">{{ $menu->description }}</textarea>
           @error('description')
             <span class="invalid-feedback" role="alert" name="description">
               {{ "Esse campo deve ser preenchido" }}

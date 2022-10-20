@@ -29,6 +29,8 @@ Route::resource('establishment', App\Http\Controllers\EstablishmentController::c
 
 Route::resource('menu', App\Http\Controllers\MenuController::class);
 
+Route::resource('order', App\Http\Controllers\OrderController::class);
+
 Route::resource('menu.product', App\Http\Controllers\MenuProductController::class)
  ->only(['store', 'destroy']);
 
