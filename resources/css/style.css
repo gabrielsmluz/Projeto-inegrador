@@ -1,3 +1,15 @@
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 50px;
+  row-gap: 50px;
+}
+
+.grid-item {
+  width: 18rem;
+}
+
 .background_products {
   margin: 0;
   background-image: url('/storage/app/public/images/products/background_products.webp');

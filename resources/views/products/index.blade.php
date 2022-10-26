@@ -35,17 +35,22 @@
                 <td class="d-flex justify-content-center">
 
                   <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#myModal">
+                    data-bs-target="#myModal{{ $product->id }}">
                     {{ $product->name }}
                   </button>
 
-                  <div class="modal" id="myModal">
-                    <div class="modal-dialog">
+                  <div class="modal" id="myModal{{ $product->id }}">
+                    <div class="modal-dialog modal-lg">
                       <div class="modal-content">
+
+                        <div class="modal-header">
+                          <h4 class="modal-title text-dark mx-auto">{{ $product->name }}</h4>
+                        </div>
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                        <img class="rounded mx-auto d-block " src="{{ asset('storage/'.$product->image_path) }}">
+                          <img style="max-width: 700px;" class="rounded mx-auto d-block "
+                            src="{{ asset('storage/'.$product->image_path) }}">
                         </div>
 
                       </div>
@@ -55,7 +60,7 @@
                 <td>{{ $product->description }}</td>
                 <td>R$:{{ $product->price_cents }},00</td>
                 <td>{{ $product->is_available }}</td>
-                <td class="">{{ $product->establishment_id }}</td>
+                <td class="">{{ $product->establishment->company_name }}</td>
                 <td class="d-flex justify-content-evenly align-content-center">
                   <button class="rounded border-primary" type="button" name="showbutton">
                     <a href="{{ route('product.show', $product->id) }}">

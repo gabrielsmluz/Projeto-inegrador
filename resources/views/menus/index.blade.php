@@ -22,6 +22,7 @@
           <th scope="col">Descrição</th>
           <th scope="col">Atividade</th>
           <th scope="col">Ações</th>
+          <th scope="col">QR Code e Link compartilhável</th>
         </tr>
       </thead>
       <tbody>
@@ -72,13 +73,35 @@
                 </div>
               </div>
             </td>
+            <td>
+              <div class="d-flex justify-content-center gap-5">
+                <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#myModal">
+                  QR Code
+                </button>
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+
+                      <div class="modal-header">
+                        <h4 class="text-center modal-title text-dark mx-auto">Use um leitor de QR Code para acessar ao cardápio</h4>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <img class="mx-auto d-block"
+                          src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl={{ urlencode(route('menu.public.show', $menu->id)) }}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="{{ route('menu.public.show', $menu->id) }}"
+                  class="mt-1">{{ route('menu.public.show', $menu->id) }}</a>
+              </div>
+            </td>
           </tr>
         @endforeach
       </tbody>
     </table>
   </div>
-</div>
-<div class=" d-flex justify-content-center">
-<h5>Link compartilhável</h5>
 </div>
 @endsection
