@@ -89,7 +89,7 @@
       <div class="d-flex flex-row">
         <div class="flex-column mt-3 form-floating">
           <input id="password" type="password" class="form-control form-control-sm" name="password"
-            value="{{ $user->password }}" placeholder="DO NOT ERASE">
+            value="" placeholder="DO NOT ERASE">
           <label class="label1">Senha</label>
           @error('password')
             <span class="invalid-feedback" role="alert" name="password">
@@ -99,7 +99,7 @@
         </div>
         <div class="flex-column mt-3 form-floating">
           <input id="password_confirmation" type="password" class="form-control form-control-sm"
-            name="password_confirmation" value="{{ $user->password }}" placeholder="DO NOT ERASE">
+            name="password_confirmation" value="" placeholder="DO NOT ERASE">
           <label class="label1">Confirmar Senha</label>
           @error('password_confirmation')
             <span class="invalid-feedback" role="alert" name="password_confirmation">

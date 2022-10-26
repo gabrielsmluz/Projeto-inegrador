@@ -52,17 +52,17 @@
                   </a>
                 </button>
                 <button class="rounded bg-danger border-danger" type="button" name="buttondelte"
-                  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$user->id}}">
                   <i class="bi bi-trash3"></i>
                 </button>
               </div>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+              <div class="modal fade" id="staticBackdrop{{$user->id}}" data-bs-backdrop="static"
                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que deseja
+                      <h5 class="modal-title text-dark" id="staticBackdropLabel">Tem certeza que deseja
                         deletar esse usuário?</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>

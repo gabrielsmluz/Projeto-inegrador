@@ -11,7 +11,7 @@
 <form class="d-flex justify-content-center" method="" action="{{ route('user.index') }}">
   @csrf
   <div class="d-flex smcontainer table justify-content-center mt-4">
-  <div class="d-flex flex-column">
+    <div class="d-flex flex-column">
       <div class="d-flex flex-row">
         <div class="flex-column mt-3 form-floating">
           <input id="name" type="text" readonly class="form-control form-control-sm" name="name"
@@ -78,7 +78,8 @@
               </label>
             </div>
             <div class="form-check">
-              <input readonly class="form-check-input" type="radio" name="type" id="flexRadioDefault2" checked>
+              <input readonly class="form-check-input" type="radio" name="type" id="flexRadioDefault2"
+                checked>
               <label class="form-check-label" for="type">
                 Funcionário
               </label>
@@ -116,6 +117,6 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </form>
 @endsection

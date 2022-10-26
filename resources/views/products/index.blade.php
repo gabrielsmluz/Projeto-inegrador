@@ -30,14 +30,33 @@
           </thead>
           <tbody>
             @foreach($products as $product)
-              <tr>
+              <tr class="">
                 <th scope="row">{{ $product->id }}</th>
-                <td>{{ $product->name }}</td>
+                <td class="d-flex justify-content-center">
+
+                  <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
+                    {{ $product->name }}
+                  </button>
+
+                  <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                        <img class="rounded mx-auto d-block " src="{{ asset('storage/'.$product->image_path) }}">
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </td>
                 <td>{{ $product->description }}</td>
                 <td>R$:{{ $product->price_cents }},00</td>
                 <td>{{ $product->is_available }}</td>
-                <td>{{ $product->establishment_id }}</td>
-                <td class="d-flex justify-content-evenly">
+                <td class="">{{ $product->establishment_id }}</td>
+                <td class="d-flex justify-content-evenly align-content-center">
                   <button class="rounded border-primary" type="button" name="showbutton">
                     <a href="{{ route('product.show', $product->id) }}">
                       <i class="bi bi-search"></i>
@@ -58,8 +77,9 @@
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que
-                            deseja deletar esse usuário?</h5>
+                          <h5 class="modal-title text-dark" id="staticBackdropLabel">Tem
+                            certeza que
+                            deseja deletar esse produto?</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                         </div>

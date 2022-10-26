@@ -18,21 +18,11 @@
           <input id="name" type="text" class="form-control" name="name" value="{{ $product->name }}"
             placeholder="DO NOT ERASE">
           <label for="inputNome" class=" label1">Nome</label>
-          @error('name')
-            <span class="invalid-feedback" role="alert" name="name">
-              {{ "Esse campo deve ser preenchido" }}
-            </span>
-          @enderror
         </div>
         <div class="flex-column mt-3 form-floating il2">
           <input id="price_cents" type="text" class="form-control" name="price_cents"
             value="{{ $product->price_cents }}" placeholder="DO NOT ERASE">
           <label for="inputNome" class=" label1">Preço</label>
-          @error('price_cents')
-            <span class="invalid-feedback" role="alert" name="price_cents">
-              {{ "Esse campo deve ser preenchido" }}
-            </span>
-          @enderror
         </div>
       </div>
       <div class="d-flex flex-row gap-3 justify-content-center">
@@ -49,8 +39,8 @@
         <div class="d-flex form-floating align-self-center my-3">
           <select id="floatingSelect" class="il1 mt-3 form-select form-select-lg bg-white" name="is_available"
             value="{{ $product->is_available }}">
-            <option selected value="1">Disponível</option>
-            <option value="0">Indisponível</option>
+            <option selected value="Disponível">Disponível</option>
+            <option value="Indisponível">Indisponível</option>
           </select>
           <label class="label1 mt-3" for="floatingSelect">Disponibilidade</label>
         </div>
