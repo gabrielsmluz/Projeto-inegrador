@@ -17,11 +17,21 @@
         <div class="flex-column mt-3 form-floating flex-fill">
           <input id="name" type="text" class="form-control" name="name" value="{{ $product->name }}"
             placeholder="DO NOT ERASE">
+          @error('name')
+            <span class="text-danger">
+              {{ $message }}
+            </span>
+          @enderror
           <label for="inputNome" class=" label1">Nome</label>
         </div>
         <div class="flex-column mt-3 form-floating il2">
           <input id="price_cents" type="text" class="form-control" name="price_cents"
             value="{{ $product->price_cents }}" placeholder="DO NOT ERASE">
+          @error('price_cents')
+            <span class="text-danger">
+              {{ $message }}
+            </span>
+          @enderror
           <label for="inputNome" class=" label1">Preço</label>
         </div>
       </div>
@@ -30,34 +40,34 @@
           <span class="input-group-text">Descrição</span>
           <textarea id="description" class="form-control" placeholder="" value=""
             name="description">{{ $product->description }}</textarea>
-          @error('description')
-            <span class="invalid-feedback" role="alert" name="description">
-              {{ "Esse campo deve ser preenchido" }}
-            </span>
-          @enderror
         </div>
-        <div class="d-flex form-floating align-self-center my-3">
-          <select id="floatingSelect" class="il1 mt-3 form-select form-select-lg bg-white" name="is_available"
-            value="{{ $product->is_available }}">
-            <option selected value="Disponível">Disponível</option>
-            <option value="Indisponível">Indisponível</option>
-          </select>
-          <label class="label1 mt-3" for="floatingSelect">Disponibilidade</label>
+        <div>@error('description')
+          <span class="text-danger">
+            {{ $message }}
+          </span>
+          @enderror</div>
+          <div class="d-flex form-floating align-self-center my-3">
+            <select id="floatingSelect" class="il1 mt-3 form-select form-select-lg bg-white"
+              name="is_available" value="{{ $product->is_available }}">
+              <option selected value="Disponível">Disponível</option>
+              <option value="Indisponível">Indisponível</option>
+            </select>
+            <label class="label1 mt-3" for="floatingSelect">Disponibilidade</label>
+          </div>
         </div>
-      </div>
-      <div class="d-flex mt-1 flex-row">
-        <div class="input-group mt-2 me-2 mb-2 ">
-          <input type="file" class="form-control" id="inputGroupFile02" name="image"
-            value="{{ $product->image }}">
-          <label class="input-group-text" for="inputGroupFile02">Upload</label>
-        </div>
-        <div class="d-flex my-2 ms-2 ">
-          <button type="submit" class="il1 btn btn-lg btn-success">
-            {{ __('Editar Produto') }}
-          </button>
+        <div class="d-flex mt-1 flex-row">
+          <div class="input-group mt-2 me-2 mb-2 ">
+            <input type="file" class="form-control" id="inputGroupFile02" name="image"
+              value="{{ $product->image }}">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
+          <div class="d-flex my-2 ms-2 ">
+            <button type="submit" class="il1 btn btn-lg btn-success">
+              {{ __('Editar Produto') }}
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </form>
 @endsection

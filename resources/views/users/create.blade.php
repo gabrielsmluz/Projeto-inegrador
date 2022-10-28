@@ -16,7 +16,7 @@
         <div class="flex-column mt-3 form-floating">
           <input id="name" type="text" class="form-control form-control-sm" name="name"
             value="{{ old('name') }}" placeholder="DO NOT ERASE">
-            @error('name')
+          @error('name')
             <span class="text-danger">
               {{ $message }}
             </span>
@@ -26,7 +26,7 @@
         <div class="flex-column mt-3 form-floating">
           <input id="phone" type="text" class="form-control form-control-sm" name="phone"
             value="{{ old('phone') }}" placeholder="DO NOT ERASE">
-            @error('phone')
+          @error('phone')
             <span class="text-danger">
               {{ $message }}
             </span>
@@ -38,7 +38,7 @@
         <div class="flex-column mt-3 form-floating">
           <input id="address" type="text" class="form-control form-control-sm" name="address"
             value="{{ old('address') }}" placeholder="DO NOT ERASE">
-            @error('address')
+          @error('address')
             <span class="text-danger">
               {{ $message }}
             </span>
@@ -46,9 +46,9 @@
           <label class="label1">Endereço</label>
         </div>
         <div class="flex-column mt-3 form-floating">
-          <input id="CPF" type="text" class="form-control form-control-sm" name="cpf"
-            value="{{ old('cpf') }}" placeholder="DO NOT ERASE">
-            @error('cpf')
+          <input id="cpf" type="text" class="form-control form-control-sm" name="cpf"
+            value="{{ old('cpf') }}" placeholder="DO NOT ERASE" autocomplete="off">
+          @error('cpf')
             <span class="text-danger">
               {{ $message }}
             </span>
@@ -58,9 +58,9 @@
       </div>
       <div class="d-flex flex-row">
         <div class="flex-column mt-3 form-floating">
-          <input id="email" type="text" class="form-control form-control-sm" name="email"
-            value="{{ old('email') }}" placeholder="DO NOT ERASE">
-            @error('email')
+          <input style="width: 231px; id=" email" type="text" class="form-control form-control-sm"
+            name="email" value="{{ old('email') }}" placeholder="DO NOT ERASE">
+          @error('email')
             <span class="text-danger">
               {{ $message }}
             </span>
@@ -68,7 +68,7 @@
           <label class="label1">Email</label>
         </div>
         <div class="mt-3 d-flex form-floating">
-          <select style="width: 232px;" name="type" class=" form-select" id="floatingSelect">
+          <select style="width: 231px;" name="type" class=" form-select" id="floatingSelect">
             <option name="type" value="manager">Gerente</option>
             <option selected name="type" value="employee">Funionário</option>
           </select>
@@ -82,9 +82,9 @@
       </div>
       <div class="d-flex flex-row">
         <div class="flex-column mt-3 form-floating">
-          <input id="password" type="password" class="form-control form-control-sm" name="password"
-            value="{{ old('password') }}" placeholder="DO NOT ERASE">
-            @error('password')
+          <input style="width: 231px; id=" password" type="password" class="form-control form-control-sm"
+            name="password" value="{{ old('password') }}" placeholder="DO NOT ERASE">
+          @error('password')
             <span class="text-danger">
               {{ $message }}
             </span>
@@ -92,10 +92,10 @@
           <label class="label1">Senha</label>
         </div>
         <div class="flex-column mt-3 form-floating">
-          <input id="password_confirmation" type="password" class="form-control form-control-sm"
-            name="password_confirmation" value="{{ old('password_confirmation') }}"
-            placeholder="DO NOT ERASE">
-            @error('password_confirmation')
+          <input style="width: 231px;" id="password_confirmation" type="password"
+            class="form-control form-control-sm" name="password_confirmation"
+            value="{{ old('password_confirmation') }}" placeholder="DO NOT ERASE">
+          @error('password_confirmation')
             <span class="text-danger">
               {{ $message }}
             </span>

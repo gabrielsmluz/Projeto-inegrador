@@ -30,7 +30,7 @@
           <tr>
             <th scope="row">{{ $menu->id }}</th>
             <td>{{ $menu->name }}</td>
-            <td>{{ $menu->description }}</td>
+            <td class="text-break">{{ $menu->description }}</td>
             <td>{{ $menu->is_active }}</td>
             <td class="d-flex justify-content-evenly">
               <button class="rounded border-primary" type="button" name="showbutton">
@@ -38,7 +38,7 @@
                   <i class="bi bi-search"></i>
                 </a>
               </button>
-              <button class="rounded border-success" type="button" name="editbutton">
+              <button class="rounded border-success" type="button" name="editbuttoninmenu">
                 <a href="{{ route('menu.edit', $menu->id) }}">
                   <i class="bi bi-pencil color='success'"></i>
                 </a>
@@ -53,8 +53,8 @@
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Tem certeza que
-                        deseja deletar esse usuário?</h5>
+                      <h5 class="text-dark modal-title" id="staticBackdropLabel">Tem certeza que
+                        deseja deletar esse cardpápio?</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                     </div>
@@ -84,7 +84,7 @@
                     <div class="modal-content">
 
                       <div class="modal-header">
-                        <h4 class="text-center modal-title text-dark mx-auto">Use um leitor de QR Code para acessar ao cardápio</h4>
+                        <h4 class="text-center modal-title text-dark mx-auto">Use um leitor de QR Code para acessar o cardápio</h4>
                       </div>
                       <!-- Modal body -->
                       <div class="modal-body">

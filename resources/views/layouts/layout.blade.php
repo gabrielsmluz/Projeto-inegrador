@@ -9,11 +9,11 @@
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="@yield('style')">
+  <script src="../resources/js/main.js"></script>
   <meta charset="utf-8">
   <title>@yield('title')</title>
   @vite(['resources/js/app.js'])
 </head>
-
 <body class="@yield('background')">
   <nav class="mb-3 navbar navbar-expand-lg bg-light">
     <div class="container-fluid d-flex">

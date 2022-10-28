@@ -57,7 +57,7 @@
                     </div>
                   </div>
                 </td>
-                <td>{{ $product->description }}</td>
+                <td class="text-break">{{ $product->description }}</td>
                 <td>R$:{{ $product->price_cents }},00</td>
                 <td>{{ $product->is_available }}</td>
                 <td class="">{{ $product->establishment->company_name }}</td>

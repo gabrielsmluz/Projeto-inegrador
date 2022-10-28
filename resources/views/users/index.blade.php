@@ -34,7 +34,7 @@
             <th scope="row">{{ $user->id }}</th>
             <td>{{ $user->name }}</td>
             <td>{{ $user->cpf }}</td>
-            <td>{{ $user->address }}</td>
+            <td class="text-break">{{ $user->address }}</td>
             <td>{{ $user->phone }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->type == 'manager'?'Gerente':'Funcionário' }}

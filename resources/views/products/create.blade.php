@@ -21,7 +21,6 @@
             </span>
           @enderror
           <label for="inputNome" class=" label1">Nome</label>
-
         </div>
         <div class="flex-column mt-3 form-floating il2">
           <input id="price_cents" type="text" class=" form-control" name="price_cents"
